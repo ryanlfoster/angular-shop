@@ -1,0 +1,52 @@
+<nav class="top-menu navbar navbar-default" role="navigation">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="#">Shop</a>
+	    <form class="navbar-form navbar-left" role="search">
+	    	<div class="form-group">
+				<input type="text" class="form-control" placeholder="Search">
+			</div>
+			<button type="submit" class="btn btn-default">Submit</button>
+	    </form>
+		<button type="button" class="navbar-toggle" data-toggle="collapse"
+			data-target=".navbar-ex1-collapse">
+			<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span>
+			<span class="icon-bar"></span> <span class="icon-bar"></span>
+		</button>
+	</div>
+	<div class="collapse navbar-collapse navbar-ex1-collapse">
+		<ul class="nav navbar-nav">
+			<li class="dropdown"><a href="#" class="dropdown-toggle"
+				data-toggle="dropdown">Products <b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li><a href="#/products/3D-Printers">3D Printers</a></li>
+					<li><a href="#/products/Robotics">Robotics</a></li>
+					<li><a href="#/products/Multi-Rotors">Multi-Rotors</a></li>
+				</ul></li>
+		</ul>
+		<ul class="nav navbar-nav">
+			<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <span class="badge">{{newPosts.length}}</span><b
+					class="caret"></b></a><ul class="dropdown-menu">
+					<li ng-repeat="post in newPosts"><a href="{{post.link}}">{{post.title}}</a></li>
+					<li role="presentation" class="divider"></li>
+					<li><a href="{{blogLink}}">View Blog</a></li>
+				</ul></li>
+			<li><a href="#/forum">Forum</a></li>
+			<li><a href="#/tutorials">Tutorials</a></li>
+			<li><a href="#/support">Support</a></li>
+			<li><a href="#/contact">Contact Us</a></li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+			<li ng-hide="loggedIn"><a href="#/login">Log In</a></li>
+			<li ng-hide="loggedIn"><a href="#/signup">Sign Up</a></li>
+			<li ng-show="loggedIn"><a href="#/logout">Log Out</a></li>
+			<li ng-show="loggedIn"><a href="#/account">Account</a></li>
+			<li class="dropdown"><a href="#" class="dropdown-toggle"
+				data-toggle="dropdown">View Cart <span class="badge">{{cartSize}}</span><b
+					class="caret"></b></a>
+				<div class="dropdown-menu cart-preview">
+					<cart></cart>
+					<a class="btn btn-primary pull-right" href="#/cart">Go to Cart</a>
+				</div></li>
+		</ul>
+	</div>
+</nav>

@@ -1,0 +1,65 @@
+.wizard .steps li {
+  margin: 0;
+  color: #999999;
+  cursor: default;
+  background: #ededed;
+  height:46px;
+  padding:0 20px 0 30px;
+  line-height:46px;
+}
+
+.wizard .steps li .chevron {
+  position: absolute;
+  top: 0;
+  right: -14px;
+  z-index: 1;
+  display: block;
+  border: 24px solid transparent;
+  border-right: 0;
+  border-left: 14px solid #d4d4d4;
+}
+
+.wizard .steps li .chevron:before {
+  position: absolute;
+  top: -24px;
+  right: 1px;
+  display: block;
+  border: 24px solid transparent;
+  border-right: 0;
+  border-left: 14px solid #ededed;
+  content: "";
+}
+
+.wizard .steps li.complete:hover .chevron:before {
+  border-left: 14px solid #e7eff8;
+}
+
+.wizard .steps li.complete .chevron:before {
+  border-left: 14px solid #f3f4f5;
+}
+
+.wizard .steps li.active {
+  color: #3a87ad;
+  background: #f1f6fc;
+}
+
+.wizard .steps li.active .badge {
+	background-color:#428bca;
+}
+
+.wizard .steps li.active .chevron:before {
+  border-left: 14px solid #f1f6fc;
+}
+
+.wizard .steps li .badge {
+  margin-right: 8px;
+}
+
+.wizard .steps li:first-child {
+  padding-left: 20px;
+  border-radius: 4px 0 0 4px;
+}
+
+.wizard .step-content {
+	padding:20px;
+}

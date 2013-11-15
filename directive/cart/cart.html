@@ -1,0 +1,36 @@
+<table class="table table-hover cart">
+	<thead>
+		<tr>
+			<th>Product</th>
+			<th>Unit Price</th>
+			<th>Quantity</th>
+			<th>Cost</th>
+		</tr>
+	</thead>
+	<tfoot>
+		<tr>
+			<th class="text-right" colspan="3">Sub Total:</th>
+			<td>{{cost.subTotal | currency}}</td>
+		</tr>
+		<tr>
+			<th class="text-right" colspan="3">Tax:</th>
+			<td>{{cost.tax | currency}}</td>
+		</tr>
+		<tr>
+			<th class="text-right" colspan="3">Shipping:</th>
+			<td>{{cost.shipping | currency}}</td>
+		</tr>
+		<tr>
+			<th class="text-right" colspan="3">Total:</th>
+			<td>{{totalCost | currency}}</td>
+		</tr>
+	</tfoot>
+	<tbody>
+		<tr ng-repeat="item in cartContents">
+			<td>{{item.name}}</td>
+			<td>{{item.price | currency}}</td>
+			<td>{{item.quantity}}</td>
+			<td>{{item.quantity*item.price | currency}}</td>
+		</tr>
+	</tbody>
+</table>

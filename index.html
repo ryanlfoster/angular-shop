@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org" id="ng-app" ng-app="shop">
+<head>
+<title></title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="fragment" content="!" /> <!-- To make page crawlable -->
+
+<!-- CSS from Bower components  -->
+
+<!-- App LESS -->
+<link href="css/app.less" type="text/css" rel="stylesheet/less">
+<link href="css/primary.less" type="text/css" rel="stylesheet/less">
+<link href="css/wizard.less" type="text/css" rel="stylesheet/less">
+<link href="css/overrides.less" type="text/css" rel="stylesheet/less">
+
+</head>
+<body>
+
+	<!-- Livereload script for development only (stripped during dist build) -->
+	<script src="http://localhost:35729/livereload.js" data-build="exclude"></script>
+
+	<!-- JS from Bower components -->
+	<script src="bower_components/less.js/dist/less-1.4.0.js"
+		data-build="exclude"></script>
+	<script src="bower_components/holderjs/holder.min.js"
+		data-build="exclude"></script>
+	<script src="bower_components/jquery/jquery.js"></script>
+	<script src="bower_components/lodash/dist/lodash.compat.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/angular-resource/angular-resource.js"></script>
+	<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+	<script src="bower_components/moment/min/moment.min.js"></script>
+
+	<!-- Main App JS -->
+	<script src="js/setup.js"></script>
+
+	<!-- Service JS -->
+	<script src="service/cart.js"></script>
+	<script src="service/products.js"></script>
+	<!-- Add New Service JS Above -->
+
+	<!-- Directive JS -->
+	<script src="directive/layout-top-menu/layout-top-menu.js"></script>
+	<script src="directive/layout-left-menu/layout-left-menu.js"></script>
+	<script src="directive/layout-bottom-menu/layout-bottom-menu.js"></script>
+	<script src="directive/breadcrumbs/breadcrumbs.js"></script>
+	<script src="directive/cart/cart.js"></script>
+	<script src="directive/wizard/wizard.js"></script>
+	<!-- Add New Directive JS Above -->
+
+	<!-- Filter JS -->
+	<!-- Add New Filter JS Above -->
+
+	<!-- Partial JS -->
+	<script src="partial/cart/cart.js"></script>
+	<script src="partial/products/products.js"></script>
+	<script src="partial/product-detail/product-detail.js"></script>
+	<script src="partial/home/home.js"></script>
+	<script src="partial/login/login.js"></script>
+	<script src="partial/logout/logout.js"></script>
+	<script src="partial/signup/signup.js"></script>
+	<script src="partial/checkout/checkout.js"></script>
+	<script src="partial/wishlist/wishlist.js"></script>
+	<script src="partial/account/account.js"></script>
+	<script src="partial/blog/blog.js"></script>
+	<script src="partial/forum/forum.js"></script>
+	<script src="partial/support/support.js"></script>
+	<script src="partial/contact/contact.js"></script>
+	<script src="partial/tutorials/tutorials.js"></script>
+	<script src="partial/contact/contact.js"></script>
+  <!-- Add New Partial JS Above -->
+
+	<div data-layout-top-menu></div>
+
+	<div class="container">
+		<div data-breadcrumbs></div>
+	</div>
+
+	<div id="content">
+		<div class="container">
+			<div class="row">
+				<div ng-view class="clearfix"></div>
+			</div>
+			<div data-layout-bottom-menu></div>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<div ng-controller="CheckoutCtrl">
+	<div class="wizard">
+		<ul class="nav nav-justified steps">
+			<li ng-class="{active: step==1}"><span class="badge">1</span>Check
+				Cart<span class="chevron"></span></li>
+			<li ng-class="{active: step==2}"><span class="badge">2</span>Shipping<span
+				class="chevron"></span></li>
+			<li ng-class="{active: step==3}"><span class="badge">3</span>Payment<span
+				class="chevron"></span></li>
+			<li ng-class="{active: step==4}"><span class="badge">4</span>Confirm<span
+				class="chevron"></span></li>
+			<li ng-class="{active: step==5}" class="complete"><span
+				class="badge">5</span>Complete</li>
+		</ul>
+		<div class="step-content panel panel-default" ng-show="step==1">
+			<cart />
+			<footer class="text-right">
+				<button class="btn btn-primary" ng-click="step=2">Continue</button>
+			</footer>
+		</div>
+		<div class="step-content panel panel-default" ng-show="step==2">
+			<footer class="text-right">
+				<button class="btn btn-default" ng-click="step=1">Back</button>
+				<button class="btn btn-primary" ng-click="step=3">Continue</button>
+			</footer>
+		</div>
+		<div class="step-content panel panel-default" ng-show="step==3">
+			<footer class="text-right">
+				<button class="btn btn-default" ng-click="step=2">Back</button>
+				<button class="btn btn-primary" ng-click="step=4">Continue</button>
+			</footer>
+		</div>
+		<div class="step-content panel panel-default" ng-show="step==4">
+			<footer class="text-right">
+				<button class="btn btn-default" ng-click="step=3">Back</button>
+				<button class="btn btn-primary" ng-click="step=5">Continue</button>
+			</footer>
+		</div>
+		<div class="step-content panel panel-default" ng-show="step==5">
+			<footer class="text-right">
+				<a href="#/home" class="btn btn-primary" ng-click="">Home</a>
+			</footer>
+		</div>
+	</div>
+</div>

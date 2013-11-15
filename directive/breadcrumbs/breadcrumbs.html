@@ -1,0 +1,5 @@
+<ol class="breadcrumb">
+  <li><a href="#">Home</a></li>
+  <li ng-repeat="crumb in crumbs.slice(0,crumbs.length-1)"><a href="#/{{crumb.path}}">{{crumb.label}}</a></li>
+  <li class="active">{{crumbs[crumbs.length-1].label}}</li>
+</ol>
